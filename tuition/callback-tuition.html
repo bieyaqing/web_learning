@@ -7,8 +7,8 @@
 
 <script type="text/javascript">
 
-var VIATICKUTIL =(() => {
-	console.log("viatick util works!");
+var YQUTIL =(() => {
+	console.log("yq util works!");
 	var app = {};
 
 	app.upload = function(getFile) {
@@ -36,11 +36,11 @@ var ANGULAR = (() => {
 	app.createMedia = function() {
 		console.log("3. start create media...");
 		// TODO logic...
-		// VIATICKUTIL.upload((res) => {
+		// YQUTIL.upload((res) => {
 		// 	console.log(res);
 		// 	console.log("4. end create media...");
 		// });
-		VIATICKUTIL.upload(processFile);
+		YQUTIL.upload(processFile);
 	};
 
 	var processFile = function(res, time) {

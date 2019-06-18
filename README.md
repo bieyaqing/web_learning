@@ -176,7 +176,7 @@ Viatick website and web application Structure, Frameworks and Technologies.
 - **JSON**
 	- Link: [JSON](http://www.json.org/)
 	- Validate Tools: [JSONLint](http://jsonlint.com/)
-	- Viatick Rules
+	- YQ Rules
 			
 		| Status    | Value       | Return             |
 		| ----------|-------------|--------------------|
