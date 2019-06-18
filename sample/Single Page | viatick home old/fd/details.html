@@ -1,0 +1,439 @@
+<html lang="en"><head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="shortcut icon" href="../../assets/ico/favicon.ico">
+
+    <title>FD</title>
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/bootstrap-theme.css" rel="stylesheet">
+
+    <!-- Just for debugging purposes. Don't actually copy this line! -->
+    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Custom styles for this template -->
+    <link href="css/animate.css" rel="stylesheet">
+    <link href="css/font-awesome.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <script src="http://maps.googleapis.com/maps/api/js?sensor=false&amp;libraries=places"></script>
+    <link href="css/ion.rangeSlider.css" rel="stylesheet">
+    <link href="css/ion.rangeSlider.skinNice.css" rel="stylesheet">
+    <link href="css/normalize.min.css" rel="stylesheet">
+    
+	</head>
+	<div class="all-content">
+	<body>
+	<!-- Navbar top
+	================================================== -->
+	<div class="navbar-wrapper">
+	    <div class="container-fluid">
+	    	<div class="navbar navbar-default navbar-fixed-top" role="navigation">
+		            <div class="navbar-header">
+		              	<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#main-nav">
+		                	<span class="sr-only">Toggle navigation</span>
+		                	<span class="icon-bar"></span>
+		                	<span class="icon-bar"></span>
+		                	<span class="icon-bar"></span>
+		              	</button>
+		              	<a class="navbar-brand fadeIn animated" href="#"><img href="#" src="images/FD.png" alt="Food Direction" style="height: 100px; width: 100px;"></a>
+		              	<a class="navbar-brand fadeIn animated hidden-xs" href="#" style="margin-left: 5px;"><h1>FOOD<b>DIRECTION</b></h1></a>
+		            </div>
+		            <div id="main-nav" class="navbar-collapse collapse navbar-right">
+			            <ul class="nav navbar-nav" style="margin-right: 5px;">
+			                <li class="active"><a href="#">Home</a></li>
+				            <li><a href="aboutus.html">About Us</a></li>
+				            <li><a href="contact.html">Contact Us</a></li>
+				            <li><a href="ad.html">Advertisement</a></li>
+				            <li><a href="contribution.html">Contribution</a></li>
+				            <li><a href="joblisting.html">Job posting</a></li>
+				            <li><a href="#login" data-toggle="modal" data-target="#m-login">Login</a></li>
+			        	</ul>
+		            </div>
+	    	</div>
+    	</div>
+    </div>
+    
+	<!-- Sub navbar
+	================================================== -->
+	
+	<section id="sub-navbar">
+		<div class="sub-navbar-wrapper">
+			<div class="container-fluid" style="padding-left: 0; padding-right: 0; margin: 0 0 0 0;">
+		    	<div class="navbar sub-navbar navbar-static-top" role="sub-nav">
+		        		<div class="navbar-header">
+		              		<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#subnav">
+		                		<span class="sr-only">Toggle navigation</span>
+		                		<span class="icon-bar"></span>
+		                		<span class="icon-bar"></span>
+		                		<span class="icon-bar"></span>
+		              		</button>
+	              		</div>
+	              		<div id="subnav" class="navbar-collapse collapse navbar-left">
+				        	<ul class="nav navbar-nav">
+				            	<li class="active"><a href="#">Home</a></li>
+					            <li><a href="#sub-all">All</a></li>
+					            <li><a href="#sub-chi">Chinese</a></li>
+					            <li><a href="#sub-jap">Japanese</a></li>
+					            <li><a href="#sub-kor">Korean</a></li>
+					            <li><a href="#sub-ita">Italian</a></li>
+					            <li><a href="#sub-west">Western</a></li>
+					            <li><a href="#sub-malay">Malay</a></li>
+					            <li><a href="#sub-thai">Thai</a></li>
+					            <li><a href="#sub-noya">Noya</a></li>
+					            <li><a href="#sub-fusion">Fusion</a></li>
+					            <li><a href="#sub-others">Others</a></li>
+				            </ul>
+				        </div>
+		     	</div>
+		  	</div>
+		</div>
+	</section> 
+	
+	<!-- Map
+	================================================== -->	
+	
+	<section id="map">
+		<div class="container-fluid" style="margin-top: 176px; padding-left: 0; padding-right: 0; margin-left: 0; margin-right: 0;">
+			<div class="panel-group" id="accordion">
+			<div class="panel panel-default text-center">
+				    <div class="panel-heading">
+				      <h4 class="panel-title">
+				        <a data-toggle="collapse" href="#search-collapse">
+				          Map Search
+				        </a>
+				      </h4>
+				    </div>
+				    <div id="search-collapse" class="panel-collapse collapse">
+				      <div class="panel-body">
+				      	<form>
+				      	<input id="address" type="text" placeholder="Type in an address" autocomplete="off">
+
+				      	<input id="category" type="text" placeholder="All categories" autocomplete="off">
+
+				      	<input id="locations" type="text" placeholder="All locations" autocomplete="off">
+
+				      	<p>Search around my position</p>
+
+            			<input id="find" type="button" value="Search">
+          				</form>
+     			      </div>
+				    </div>
+			</div>
+			</div>
+			<div id="map_canvas"></div> 
+			<div class="container-fluid" style="height: 30px; background-color: #65dccd;"></div>			
+		</div>
+	</section>	
+	
+	<!-- Main Content
+	================================================== -->		
+	
+	<section id="main-content">
+		<div class="container-fluid">
+			<div class="width-90" style="margin-top: 30px; margin-bottom: 30px;">    
+				<div class="row">
+					<!-- Left Col -->
+					<div class="col-sm-6">
+						<table class="detail">
+							<tr>
+								<!-- Picture -->
+								<td colspan="3">
+									<img class="img-responsive" src="images/a.jpg" style="height: 150px; width: 250px;">
+								</td>
+								<!-- Name, Email, Website -->
+								<td colspan="3">
+									<h1>Test Restaurant</h1>
+									<p><span class="fa fa-home"></span> Restaurant / Pasta / Test Restaurant</p>
+									<p><span class="fa fa-envelope-o"></span> mailme@mail.com</p>
+									<p><span class="fa fa-list-alt"></span> web@web.com</p>
+								</td>
+							</tr>
+							<tr>
+								<!-- Address Col -->
+								<td colspan="2">
+									<p><span class="fa fa-location-arrow"> Address</span></p>
+									<p>Abc efg,<br>Abc Road<br>Singapore</p>
+									<p><span class="fa fa-phone-square"> Telephone</span></p>
+									<p>999 9999 9999</p>
+									<form action="joblisting.html">
+									    <input class="btn-jp" type="button" value="Job Posting" style="background-color: #65dccd;">
+									</form>
+								</td>
+								<td colspan="4">
+									<p><span class="fa fa-clock-o"> Opening Hours</span></p>
+										<p>Mon - Fri: 8am - 8pm</p>
+										<p>Sat - Sun: 12am - 12am</p>
+								</td>
+							</tr>
+						</table>						
+					</div>
+					
+					<!-- Video Right Col -->
+					<div class="col-sm-6 text-center">
+						<iframe width="560" height="315" src="//www.youtube.com/embed/cir34sbnH2U" frameborder="0" allowfullscreen></iframe>
+						<h5>DISCLAIMER WHAT??????????</h5>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="container-fluid" style="height: 30px; background-color: #65dccd;"></div>
+	</section>
+	
+	<!-- Carousel
+    ================================================== -->
+    <section id="contri-carousel">
+    	<div class="container-fluid">
+		    <div class="contri-carousel owl-carousel owl-theme">
+			  <div class="item"><h1>1</h1></div>
+			  <div class="item"><h1>2</h1></div>
+			  <div class="item"><h1>3</h1></div>
+			  <div class="item"><h1>4</h1></div>
+			  <div class="item"><h1>5</h1></div>
+			  <div class="item"><h1>6</h1></div>
+			  <div class="item"><h1>7</h1></div>
+			  <div class="item"><h1>8</h1></div>
+			  <div class="item"><h1>9</h1></div>
+			  <div class="item"><h1>10</h1></div>
+			  <div class="item"><h1>11</h1></div>
+			  <div class="item"><h1>12</h1></div>
+			  <div class="item"><h1>13</h1></div>
+			  <div class="item"><h1>14</h1></div>
+			  <div class="item"><h1>15</h1></div>
+			  <div class="item"><h1>16</h1></div>
+			  <div class="item"><h1>17</h1></div>
+			  <div class="item"><h1>18</h1></div>
+			  <div class="item"><h1>19</h1></div>
+			  <div class="item"><h1>20</h1></div>
+			</div>
+		</div>
+	</section>
+	
+	<!-- Footer
+    ================================================== -->
+	
+	<section id="footer">
+		<div class="footer-wrapper">
+			<div class="container-fluid">
+			<div class="line"></div>
+				<div class="row">
+					<div class="col-sm-4 text-center">
+						<p>
+							<h1>Quick Contact</h1>
+						</p>
+						<div class="footer-line"></div>
+						<p>
+							<span class="fa-stack fa-2x">
+							<i class="fa fa-circle fa-stack-2x"></i>
+							<i class="fa fa-phone fa-stack-1x fa-inverse"></i>
+							</span>
+							<span class="footer-color">044 802 2578</span>
+						</p>
+						<div class="footer-line"></div>
+						<p>
+							<span class="fa-stack fa-2x">
+							<i class="fa fa-circle fa-stack-2x"></i>
+							<i class="fa fa-envelope fa-stack-1x fa-inverse"></i>
+							</span>
+							<span class="footer-color">abc@gmail.com</span>
+						</p>
+						<div class="dotted"></div>
+						<p>
+							<span class="fa-stack fa-2x fb">
+							<i class="fa fa-circle fa-stack-2x"></i>
+							<i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
+							</span>
+						</p>
+					</div>
+					<div class="col-sm-4 text-center">
+						<h1>Section</h1>
+						<div class="section">
+							<ul>
+				                <li><a href="index.html">Home</a></li>
+					            <li><a href="aboutus.html">About Us</a></li>
+					            <li><a href="contact.html">Contact Us</a></li>
+					            <li><a href="ad.html">Advertisement</a></li>
+					            <li><a href="contribution.html">Contribution</a></li>
+					            <li><a href="joblisting.html">Job posting</a></li>
+					            <li><a href="#login" data-toggle="modal" data-target="#m-login">Login</a></li>
+			        		</ul>
+						</div>
+					</div>
+					<div class="col-sm-4 text-center">
+						<h1>QR</h1>
+						<img class="img-responsive" src="images/qr.png">
+					</div>
+				</div>
+				<div class="line"></div>
+			</div>
+		</div>
+		<a href="#" class="back-to-top"><span class="fa fa-caret-square-o-up fa-3x"></span></a>
+	</section>
+	
+    <!-- Modal Login Form
+    ================================================== -->
+    
+	<section id="modal-login-form">
+		<div class="modal fade" id="m-login" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+			<div class="modal-dialog">
+				<div class="modal-content" id="modal-form-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+						<div id="login">
+							<p><h4 class="modal-title" id="myModalLabel">Login</h4></p>
+						</div>
+						<div id="register">
+							<p><h4 class="modal-title" id="myModalLabel">Sign Up</h4></p>
+						</div>
+						<button id="btn-login" type="button" class="btn btn-login">Login</button>
+						<button id="btn-register" type="button" class="btn btn-register">Sign Up</button>
+					</div>
+					<div class="modal-body">
+						<div id="login2">
+							<p>Username<br>
+							<input class="user" type="text">
+							</p>
+							<p>Password<br>
+							<input class="pass" type="password">
+							</p>
+						</div>
+						<div id="register2">
+							<p>Username<br>
+							 <input class="user" type="text">
+							 </p>
+							 <p>Password<br>
+							 <input class="pass" type="password">
+							 </p>
+							 <p>Package<br>
+							 <input class="package" type="text">
+							 </p>
+						</div>
+					</div>
+					<div class="modal-footer">
+						<div id="login3">
+							<button type="button" class="btn btn-login2">Login</button>
+						</div>
+						<div id="register3">
+							<button type="button" class="btn btn-signup">Sign up</button>
+						</div>
+					</div>		
+				</div>
+			</div>
+		</div>
+	</section>	
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="http://maps.googleapis.com/maps/api/js?libraries=places&sensor=false"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="js/owl.carousel.js"></script>
+    <script src="js/custom.js"></script>
+    <script src="js/jquery.colorbox.js"></script>
+    <script src="js/j.lazyload.min.js"></script>
+    <script src="js/pace.min.js"></script>
+    <script src="js/ion.rangeSlider.min.js"></script>
+    
+    <script>
+      var myLatlng = new google.maps.LatLng(1.3667,103.8);
+	  	var mapOptions = {
+	    zoom: 17,
+	    center: myLatlng,
+	  }
+	  
+	  //for radar search
+	  var infoWindow;
+	  var service;
+	  //for radar search
+	  
+	  var map = new google.maps.Map(document.getElementById('map_canvas'), mapOptions);
+		
+	  var input = (document.getElementById('address'));
+	  var componentRestrictions = { country: 'sg' };
+	  var autocomplete = new google.maps.places.Autocomplete(input);
+	  autocomplete.setComponentRestrictions(componentRestrictions);
+	  
+	  var homepos;
+	  
+	  if(navigator.geolocation) {
+		    navigator.geolocation.getCurrentPosition(function(position) {
+		      homepos = new google.maps.LatLng(position.coords.latitude,
+		                                       position.coords.longitude);
+		      var marker = new google.maps.Marker({
+			      position: homepos,
+			      map: map,
+			      icon: {
+			    	  url: 'images/home.png'
+			      }
+			  });
+
+		      map.setCenter(homepos);
+		    }, function() {
+		      handleNoGeolocation(true);
+		    });
+		  } else {
+		    handleNoGeolocation(false);
+	  }
+	  
+	  //for radar search
+	  infoWindow = new google.maps.InfoWindow();
+	  service = new google.maps.places.PlacesService(map);
+	  
+	  google.maps.event.addListenerOnce(map, 'bounds_changed', performSearch);
+	  
+	  function performSearch() {
+		  var request = {
+		    bounds: map.getBounds(),
+		    keyword: 'food'
+		  };
+		  service.radarSearch(request, callback);
+	  }
+	  
+	  function callback(results, status) {
+		  if (status != google.maps.places.PlacesServiceStatus.OK) {
+		    alert(status);
+		    return;
+		  }
+		  for (var i = 0, result; result = results[i]; i++) {
+		    createMarker(result);
+		  }
+		}
+
+		function createMarker(place) {
+		  var marker = new google.maps.Marker({
+		    map: map,
+		    position: place.geometry.location,
+		    icon: {
+		      // Star
+		      path: 'M 0,-24 6,-7 24,-7 10,4 15,21 0,11 -15,21 -10,4 -24,-7 -6,-7 z',
+		      fillColor: '#ffff00',
+		      fillOpacity: 1,
+		      scale: 1/4,
+		      strokeColor: '#bd8d2c',
+		      strokeWeight: 1
+		    }
+		  });
+
+		  google.maps.event.addListener(marker, 'click', function() {
+		    service.getDetails(place, function(result, status) {
+		      if (status != google.maps.places.PlacesServiceStatus.OK) {
+		        alert(status);
+		        return;
+		      }
+		      infoWindow.setContent(result.name);
+		      infoWindow.open(map, marker);
+		    });
+		  });
+		}
+    </script>
+   
+</body></div></html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>callback tuition</title>
+</head>
+<body>
+
+<script type="text/javascript">
+
+var VIATICKUTIL =(() => {
+	console.log("viatick util works!");
+	var app = {};
+
+	app.upload = function(getFile) {
+		console.log("1. start upload...");
+		// TODO logic...
+		// setInterval(() => {
+		// 	console.log("2. end upload...");
+		// 	getFile({"mediaId": 1});
+		// }, 2000);
+
+		setTimeout(() => {
+			console.log("2. end upload...");
+			getFile({"mediaId": 1}, 4000);
+		}, 2000);
+	};
+
+	return app;
+})();
+
+
+var ANGULAR = (() => {
+	console.log("angular works!");
+	var app = {};
+
+	app.createMedia = function() {
+		console.log("3. start create media...");
+		// TODO logic...
+		// VIATICKUTIL.upload((res) => {
+		// 	console.log(res);
+		// 	console.log("4. end create media...");
+		// });
+		VIATICKUTIL.upload(processFile);
+	};
+
+	var processFile = function(res, time) {
+		setTimeout(function() {
+			console.log(res);
+			console.log("4. end create media...");
+		}, time);
+	};
+
+	return app;
+})();
+
+
+</script>
+</body>
+</html>
